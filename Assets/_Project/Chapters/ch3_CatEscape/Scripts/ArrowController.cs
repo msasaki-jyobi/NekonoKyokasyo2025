@@ -34,6 +34,9 @@ public class ArrowController : MonoBehaviour
 
         if(d < r1 + r2) // 距離dが矢とプレイヤーの半径未満なら
         {
+            var director = GameObject.Find("GameDirector");
+            director.GetComponent<GameDirector>().DecreaseHP();
+
             Debug.Log($"座標差分:{dir}, 矢と猫の距離(d):{d} d < r1+r2:{d} < {r1+r2}");
             Destroy(gameObject);
         }
