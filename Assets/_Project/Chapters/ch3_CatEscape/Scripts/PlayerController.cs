@@ -18,4 +18,10 @@ public class PlayerController : MonoBehaviour
             transform.Translate(3, 0, 0);
         }
     }
+
+    public void OnRightMove(int value)
+    {
+        transform.Translate(value, 0, 0);
+    }
+    public void OnLeftMove() => transform.Translate(-3, 0, 0);
 }
